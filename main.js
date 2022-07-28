@@ -200,7 +200,7 @@ document.querySelector('#enter').addEventListener('click', (e)=>{
     duration: 1.5,
     delay: 1.5,
     onComplete: () =>{
-      window.location = 'https://stirring-tiramisu-c96494.netlify.app/'
+      window.location = 'menu.html'
     }
   })
 })
