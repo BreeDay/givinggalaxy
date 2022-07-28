@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giving Galaxy</title>
+</head>
+<style>
+    body{
+        margin:0;
+        -webkit-font-smoothing:antialiased;
+      }
+      .absolute{
+        position: absolute;
+        color: white;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+      }
+      .font{
+        font-family: 'Exo 2', sans-serif; 
+       }
+       #left{
+         top: 5%;
+         left: 10%;
+       }
+       #text{
+         top: 15%;
+         left: 50%;
+       }
+       .accordion{
+         position: absolute;
+         /* height: 850px;
+         width: 25%; */
+         top: 20%;
+         left: 70%;
+         /* opacity: 0.5; */
+         text-align: center;
+       }
+       .accordion-item{
+         background-color: grey;
+         border-radius: 0.5rem;
+         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+         color: white;
+         padding: 10px;
+         margin: 5px;
+       }
+       .accordion-header{
+         font-weight: 500;
+         font-size: large;
+         padding: 7px;
+       }
+       /* .accordion-header::after{
+         content: "\002B";
+         font-size: 2rem;
+         position: absolute;
+         right: 1rem;
+       }
+       .accordion-header.active::after{
+         content: "\2212";
+       } */
+      .accordion-body{
+        padding: 1rem;
+        border-top: 3px solid;
+        border-image: linear-gradient(to right, white, transparent) 1;
+        /* line-height: 1.5rem; */
+      }
+      .accordion-header.active + .accordion-body{
+        display: block;
+      }
+</style>
+<body>
+    <div id="app">
+      <div class="absolute font max-w-2xl" id="left">
+        <h1 class="text-4xl tracking-wide opacity-0" id="jodem">Welcome John Demo</h1>
+      </div>
+
+        <div class="absolute font max-w-2xl" id="text">
+          <h1 class="text-4xl tracking-wide opacity-0" id="welcome">Choose Your Winner</h1><br>
+          <button class="border px-4 py-2 rounded-lg tracking-wide text-sm uppercase opacity-0 hover:bg-white hover:text-gray-800 inline-block" id="view"><a href="#">View All</a></button>
+          <button class="border px-4 py-2 rounded-lg tracking-wide text-sm uppercase opacity-0 hover:bg-white hover:text-gray-800 inline-block" id="top"><a href="#">Top Rated</a></button>
+          <button class="border px-4 py-2 rounded-lg tracking-wide text-sm uppercase opacity-0 hover:bg-white hover:text-gray-800 inline-block" id="random"><a href="#">Pick Random</a></button>
+          <!-- <button class="border px-4 py-2 rounded-lg tracking-wide text-sm hover:bg-white opacity-0 hover:text-gray-800 inline-block" id="ibree"><a href="#">MEET iBREE</a></button> -->
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item opacity-0" id="as">
+            <div class="accordion-header">Asteroid Shark</div>
+            <div class="accordion-body">
+              <p>Making the world a better place through ocean clean up 3x a week. My team and I have removed over 1000 lbs of plastic and fishing nets from the Pacific Ocean.</p><br>
+              <button class="border px-4 py-2 rounded-lg tracking-wide text-sm uppercase hover:bg-white hover:text-gray-800 inline-block" id="asdet"><a href="#">Details</a></button><br>
+            </div>
+          </div>
+
+          <div class="accordion-item opacity-0" id="ns">
+            <div class="accordion-header">Nebula Space</div>
+            <div class="accordion-body">
+              <p>I work with a local farm that sustainably produces fruits and vegitables for the community. Our work ensures that members of our community have a healthy meal and the land will last generations.</p><br>
+              <button class="border px-4 py-2 rounded-lg tracking-wide text-sm uppercase hover:bg-white hover:text-gray-800 inline-block" id="nsdet"><a href="#">Details</a></button><br>
+          </div>
+          </div>
+
+        <div class="accordion-item opacity-0" id="ac">
+          <div class="accordion-header">Air Comet</div>
+          <div class="accordion-body">
+            <p>I have spent my summer fundraising for cancer research. To date, I have raised over $2000 through bake sales, car washes, and 5ks.</p><br>
+            <button class="border px-4 py-2 rounded-lg tracking-wide text-sm uppercase hover:bg-white hover:text-gray-800 inline-block" id="acdet"><a href="#">Details</a></button><br>
+          </div>
+        </div>
+
+      <div class="accordion-item opacity-0" id="lm">
+        <div class="accordion-header">Lightning Meteoroid</div>
+        <div class="accordion-body">
+          <p>For the past 2 years I have mentored youth in my community. By volunteering with at risk youth, my students have had an increase of two letter grades for each of their classes. 
+            Three students have been offered scholarships to college.</p><br>
+            <button class="border px-4 py-2 rounded-lg tracking-wide text-sm uppercase hover:bg-white hover:text-gray-800 inline-block" id="lmdet"><a href="#">Details</a></button>
+      </div>
+      </div>
+    </div>
+
+    </div>
+</body>
+<script type="module" src="/menu.js"></script>
+</html>
